@@ -1,8 +1,11 @@
 {
   "name": "Pavel Gretskov",
   "page-title": "@:name · Portfolio",
-  "terms": {
-    "title": "Portfolio"
+  "about": {
+    "title": "Who am I"
+  },
+  "projects": {
+    "title": "Implemented Projects"
   },
   "gallery": {
     "title": "Gallery"

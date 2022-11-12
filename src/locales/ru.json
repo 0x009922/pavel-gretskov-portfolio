@@ -1,8 +1,11 @@
 {
   "name": "Грецков Павел",
   "page-title": "@:name · Портфолио",
-  "terms": {
-    "title": "Портфолио"
+  "about": {
+    "title": "Обо мне"
+  },
+  "projects": {
+    "title": "Реализованные проекты"
   },
   "gallery": {
     "title": "Галерея"
