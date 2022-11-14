@@ -8,7 +8,13 @@ const BLOOMBERG_ARTICLE_HREF =
 </script>
 
 <template>
-  <main class="mx-auto max-w-170 px-4 py-16 space-y-4">
+  <nav class="fixed top-0 left-0 right-0 h-12">
+    <div class="max-w-170 mx-auto h-full flex items-center">
+      <ThemePicker />
+    </div>
+  </nav>
+
+  <main class="mx-auto max-w-170 px-4 pt-28 pb-16 space-y-4">
     <VCard>
       <div class="relative">
         <img
@@ -22,7 +28,7 @@ const BLOOMBERG_ARTICLE_HREF =
           src="~/assets/avatar.webp"
           width="64"
           height="64"
-          class="avatar absolute bottom-4 left-6 rounded-full bg-white"
+          class="avatar absolute bottom-4 left-6 rounded-full"
           style="transform: translateY(25%)"
           alt="My avatar"
         />
@@ -30,9 +36,7 @@ const BLOOMBERG_ARTICLE_HREF =
 
       <div class="p-6 space-y-2">
         <h1 class="text-4xl font-semibold">Pavel Gretskov</h1>
-        <p class="text-gray-500" role="doc-subtitle">
-          Formulation and Process Development Scientist
-        </p>
+        <p role="doc-subtitle">Formulation and Process Development Scientist</p>
       </div>
     </VCard>
 
@@ -152,16 +156,36 @@ const BLOOMBERG_ARTICLE_HREF =
 </template>
 
 <style lang="scss">
+$black: rgb(0, 4, 8);
+$white: rgb(250, 252, 255);
+
 :root {
   --font: 'Rubik';
+  --c-text-primary: #{$black};
+  --c-text-secondary: #{lighten($black, 10)};
+  --c-surface: white;
+  --c-bg: #{darken($white, 0)};
+  --c-border: rgb(221, 225, 227);
+  --transition: color 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 body {
-  background-color: #eee;
+  background-color: var(--c-bg);
+  font-family: var(--font);
+  color: var(--c-text-primary);
 }
 
-main {
-  font-family: var(--font);
+nav {
+  background-color: var(--c-surface);
+  z-index: 99;
+  border-bottom: 2px solid var(--c-border);
+  transition: var(--transition);
+}
+
+p[role='doc-subtitle'] {
+  color: var(--c-text-secondary);
+  transition: var(--transition);
 }
 
 b {
@@ -181,6 +205,20 @@ ul {
     list-style-type: circle;
   }
 }
+
+html.dark {
+  color-scheme: dark;
+
+  --c-text-primary: #{$white};
+  --c-text-secondary: #{darken($white, 10)};
+  --c-surface: #{lighten($black, 15)};
+  --c-bg: #{lighten($black, 10)};
+  --c-border: rgba(66, 70, 88, 0.5);
+}
+
+body {
+  transition: var(--transition);
+}
 </style>
 
 <style lang="scss" scoped>
@@ -190,7 +228,8 @@ ul {
     width: 100%;
     height: auto;
     border-radius: 4px;
-    border: 2px solid rgb(221, 225, 227);
+    border: 2px solid var(--c-border);
+    transition: var(--transition);
   }
 }
 
@@ -198,5 +237,7 @@ img.avatar {
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14),
     0 1px 14px 0 rgba(0, 0, 0, 0.12);
   padding: 2px;
+  background-color: var(--c-surface);
+  transition: var(--transition);
 }
 </style>

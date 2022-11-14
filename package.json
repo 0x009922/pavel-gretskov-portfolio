@@ -9,13 +9,18 @@
   },
   "devDependencies": {
     "@fontsource/rubik": "^4.5.11",
+    "@iconify-json/material-symbols": "^1.1.22",
     "@unocss/nuxt": "^0.46.5",
     "@unocss/reset": "^0.46.5",
     "nuxt": "3.0.0-rc.13",
-    "sass": "^1.56.1"
+    "sass": "^1.56.1",
+    "unplugin-icons": "^0.14.13"
   },
   "prettier": {
     "semi": false,
     "singleQuote": true
+  },
+  "dependencies": {
+    "@vueuse/core": "^9.5.0"
   }
 }

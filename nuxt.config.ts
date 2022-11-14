@@ -15,5 +15,5 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ['@unocss/nuxt'],
+  modules: ['@unocss/nuxt', 'unplugin-icons/nuxt'],
 })
