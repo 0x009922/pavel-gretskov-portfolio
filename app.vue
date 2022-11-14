@@ -9,7 +9,7 @@ const BLOOMBERG_ARTICLE_HREF =
 
 <template>
   <nav class="fixed top-0 left-0 right-0 h-12">
-    <div class="max-w-170 mx-auto h-full flex items-center">
+    <div class="max-w-170 mx-auto px-4 h-full flex items-center">
       <ThemePicker />
     </div>
   </nav>

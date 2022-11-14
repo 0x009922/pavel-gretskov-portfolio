@@ -23,7 +23,7 @@ const toggleDark = useToggle(isDark)
 <style lang="scss" scoped>
 button {
   background: none;
-  border: none;
+  border: 1px solid var(--c-border);
   border-radius: 99px;
   width: 24px;
   height: 24px;
