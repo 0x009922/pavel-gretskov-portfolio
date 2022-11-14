@@ -8,7 +8,13 @@ const toggleDark = useToggle(isDark)
 </script>
 
 <template>
-  <button role="button" @click="toggleDark()">
+  <button
+    type="button"
+    role="switch"
+    aria-label="Toggle dark mode"
+    :aria-checked="isDark"
+    @click="toggleDark()"
+  >
     <IconDark v-if="isDark" />
     <IconLight v-else />
   </button>
