@@ -13,13 +13,17 @@ const BLOOMBERG_ARTICLE_HREF =
         <img
           src="~/assets/bloomberg-hands.webp"
           width="680"
-          class="w-full mb-4"
+          height="261"
+          class="w-full mb-4 object-cover"
+          alt="Background - photo of my hands by Bloomberg"
         />
         <img
           src="~/assets/avatar.webp"
-          width="64px"
-          class="w-16 h-16 absolute bottom-4 left-3 rounded-full p-1 bg-white"
+          width="64"
+          height="64"
+          class="avatar absolute bottom-4 left-4 rounded-full bg-white"
           style="transform: translateY(25%)"
+          alt="My avatar"
         />
       </div>
 
@@ -117,14 +121,25 @@ const BLOOMBERG_ARTICLE_HREF =
         <div class="gallery space-y-4">
           <img
             src="~/assets/bloomberg-deleted.webp"
-            width="680"
             alt="Article, deleted from Bloomberg"
+            width="680"
+            height="1209"
+            loading="lazy"
           />
           <img
             src="~/assets/tablets-heart.webp"
             alt="Bunch of tablets formed into heart"
+            loading="lazy"
+            width="680"
+            height="383"
           />
-          <img src="~/assets/me-in-stock.webp" alt="Me in stock" />
+          <img
+            src="~/assets/me-in-stock.webp"
+            alt="Me in stock"
+            loading="lazy"
+            width="680"
+            height="907"
+          />
         </div>
       </section>
     </VCard>
@@ -166,9 +181,17 @@ ul {
 <style lang="scss" scoped>
 .gallery {
   img {
+    display: block;
     width: 100%;
+    height: auto;
     border-radius: 4px;
-    border: 1px solid #aaa;
   }
+}
+
+img.avatar {
+  box-shadow: 0 3px 5px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)),
+    0 5px 8px 0 var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)),
+    0 1px 14px 0 var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
+  padding: 2px;
 }
 </style>
