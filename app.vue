@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import 'uno.css'
 import '@unocss/reset/eric-meyer.css'
+import '@fontsource/rubik'
 
 const BLOOMBERG_ARTICLE_HREF =
   'https://www.bloomberg.com/press-releases/2020-05-13/rdif-and-chemrar-announce-first-interim-results-of-clinical-trials-of-favipiravir-drug-s-effectiveness-in-coronavirus-therapy'
 </script>
 
 <template>
-  <main class="mx-auto max-w-170 p-4 space-y-4">
-    <VCard class="pb-4">
+  <main class="mx-auto max-w-170 px-4 py-16 space-y-4">
+    <VCard>
       <div class="relative">
         <img
           src="~/assets/bloomberg-hands.webp"
@@ -21,20 +22,22 @@ const BLOOMBERG_ARTICLE_HREF =
           src="~/assets/avatar.webp"
           width="64"
           height="64"
-          class="avatar absolute bottom-4 left-4 rounded-full bg-white"
+          class="avatar absolute bottom-4 left-6 rounded-full bg-white"
           style="transform: translateY(25%)"
           alt="My avatar"
         />
       </div>
 
-      <h1 class="text-4xl px-4 pt-2 pb-2 font-semibold">Pavel Gretskov</h1>
-      <p class="px-4 text-gray-500" role="doc-subtitle">
-        Formulation and Process Development Scientist
-      </p>
+      <div class="p-6 space-y-2">
+        <h1 class="text-4xl font-semibold">Pavel Gretskov</h1>
+        <p class="text-gray-500" role="doc-subtitle">
+          Formulation and Process Development Scientist
+        </p>
+      </div>
     </VCard>
 
     <VCard>
-      <section class="p-4 space-y-4">
+      <section class="p-6 space-y-4">
         <VH2>About</VH2>
         <p class="text-sm">
           I have been developing research and design in the pharmaceutical field
@@ -49,10 +52,10 @@ const BLOOMBERG_ARTICLE_HREF =
     </VCard>
 
     <VCard>
-      <section class="p-4 space-y-8 text-sm">
+      <section class="p-6 space-y-8 text-sm">
         <VH2>Implemented Projects</VH2>
 
-        <section class="space-y-4">
+        <section class="space-y-3">
           <VH3>Original formulation</VH3>
 
           <ul>
@@ -71,7 +74,7 @@ const BLOOMBERG_ARTICLE_HREF =
           </ul>
         </section>
 
-        <section class="space-y-4">
+        <section class="space-y-3">
           <VH3>Design of technology</VH3>
 
           <ul>
@@ -88,7 +91,7 @@ const BLOOMBERG_ARTICLE_HREF =
 
               <ul>
                 <li>API concentration &mdash; <b>97%</b></li>
-                <li>Tablets hardness &mdash; <b>150 H</b></li>
+                <li>Tablets hardness &mdash; <b>200 H</b></li>
               </ul>
             </li>
             <li>
@@ -102,11 +105,13 @@ const BLOOMBERG_ARTICLE_HREF =
           </ul>
         </section>
 
-        <section class="space-y-4">
+        <section class="space-y-3">
           <VH3>COVID-19</VH3>
 
           <p>
-            <b>Favipiravir tablets</b> (<a :href="BLOOMBERG_ARTICLE_HREF"
+            <b>Favipiravir tablets</b> (<a
+              :href="BLOOMBERG_ARTICLE_HREF"
+              target="_blank"
               >Bloomberg publication</a
             >) &dash; development of the first Russian drug against COVID-19.
           </p>
@@ -115,7 +120,7 @@ const BLOOMBERG_ARTICLE_HREF =
     </VCard>
 
     <VCard>
-      <section class="p-4 space-y-8">
+      <section class="p-6 space-y-8">
         <VH2>Gallery</VH2>
 
         <div class="gallery space-y-4">
@@ -148,7 +153,7 @@ const BLOOMBERG_ARTICLE_HREF =
 
 <style lang="scss">
 :root {
-  --font: 'Inconsolata';
+  --font: 'Rubik';
 }
 
 body {
@@ -185,13 +190,13 @@ ul {
     width: 100%;
     height: auto;
     border-radius: 4px;
+    border: 2px solid rgb(221, 225, 227);
   }
 }
 
 img.avatar {
-  box-shadow: 0 3px 5px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)),
-    0 5px 8px 0 var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)),
-    0 1px 14px 0 var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.14),
+    0 1px 14px 0 rgba(0, 0, 0, 0.12);
   padding: 2px;
 }
 </style>

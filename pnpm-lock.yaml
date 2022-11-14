@@ -1,12 +1,14 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/rubik': ^4.5.11
   '@unocss/nuxt': ^0.46.5
   '@unocss/reset': ^0.46.5
   nuxt: 3.0.0-rc.13
   sass: ^1.56.1
 
 devDependencies:
+  '@fontsource/rubik': 4.5.11
   '@unocss/nuxt': 0.46.5
   '@unocss/reset': 0.46.5
   nuxt: 3.0.0-rc.13_sass@1.56.1
@@ -345,6 +347,10 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/rubik/4.5.11:
+    resolution: {integrity: sha512-m0/4GKOqJjF9cB4wuLgDhRdRVt35WzqI5n7SgddRjRD+yzsO0eEq/ak0ezgfbR3+f91ydDCek1+RuOVB8dNYwg==}
+    dev: true
 
   /@iconify/types/2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
