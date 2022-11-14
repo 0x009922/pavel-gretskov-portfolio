@@ -36,7 +36,9 @@ const BLOOMBERG_ARTICLE_HREF =
 
       <div class="p-6 space-y-2">
         <h1 class="text-4xl font-semibold">Pavel Gretskov</h1>
-        <p role="doc-subtitle">Formulation and Process Development Scientist</p>
+        <p class="text-lg" role="doc-subtitle">
+          Formulation and Process Development Scientist
+        </p>
       </div>
     </VCard>
 
