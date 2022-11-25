@@ -2,15 +2,34 @@
 import 'uno.css'
 import '@unocss/reset/eric-meyer.css'
 import '@fontsource/rubik'
+import MdiLinkedin from '~icons/mdi/linkedin'
+import MdiCardAccountMail from '~icons/mdi/card-account-mail'
 
 const BLOOMBERG_ARTICLE_HREF =
   'https://www.bloomberg.com/press-releases/2020-05-13/rdif-and-chemrar-announce-first-interim-results-of-clinical-trials-of-favipiravir-drug-s-effectiveness-in-coronavirus-therapy'
+
+const HREF_LINKEDIN = 'https://www.linkedin.com/in/pavel-gretskov-96955b238'
+const EMAIL = 'pavelgretskov@gmail.com'
 </script>
 
 <template>
   <nav class="fixed top-0 left-0 right-0 h-12">
-    <div class="max-w-170 mx-auto px-4 h-full flex items-center">
+    <div
+      class="max-w-170 mx-auto px-4 h-full flex items-center space-x-4 text-xs"
+    >
       <ThemePicker />
+
+      <div class="flex-1" />
+
+      <HeaderLink :href="HREF_LINKEDIN" target="_blank">
+        <template #icon><MdiLinkedin /></template>
+        <template #text>Pavel Gretskov</template>
+      </HeaderLink>
+
+      <HeaderLink :href="`mailto:${EMAIL}`">
+        <template #icon><MdiCardAccountMail /></template>
+        <template #text>{{ EMAIL }}</template>
+      </HeaderLink>
     </div>
   </nav>
 
@@ -163,6 +182,7 @@ $white: rgb(250, 252, 255);
 
 :root {
   --font: 'Rubik';
+  --c-accent: rgb(99, 102, 241);
   --c-text-primary: #{$black};
   --c-text-secondary: #{lighten($black, 10)};
   --c-surface: white;
@@ -215,7 +235,7 @@ html.dark {
   --c-text-secondary: #{darken($white, 10)};
   --c-surface: #{lighten($black, 15)};
   --c-bg: #{lighten($black, 10)};
-  --c-border: rgba(66, 70, 88, 0.5);
+  --c-border: rgba(106, 110, 118, 0.5);
 }
 
 body {
